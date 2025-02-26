@@ -10,21 +10,22 @@ texteACorriger = pyperclip.paste()
 openai.api_key = "xxxx"#Change Key
 
 response = openai.chat.completions.create(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     messages=[
         {
-            "role": "system", "content": """Vous êtes un correcteur orthographique expert. Votre tâche est de :
-            1. Corriger les fautes d'orthographe.
-            2. Ajuster les mots existants si leur forme ne convient pas au contexte (temps, accord, etc.).
-            3. Ne pas modifier le sens général, la structure des phrases ou le vocabulaire choisi.
-            4. Ne pas ajouter, supprimer ou remplacer des mots, sauf si c'est nécessaire pour la correction orthographique.
-            5. Comparer le sens du texte original à celui du texte corrigé. 
-            6. Ajuster en fonction de la comparaison de sens pour être au plus proche du texte original
-            Présentez uniquement le texte corrigé sans explications."""
+            "role": "system", 
+            "content": """Correcteur orthographique bilingue (français/anglais). Instructions:
+            1. Détecter automatiquement la langue du texte fourni (français ou anglais)
+            2. Corriger: orthographe, grammaire, accords, conjugaisons, ponctuation selon les règles de la langue détectée
+            3. Préserver: sens original, structure des phrases, style, vocabulaire choisi, registre de langue
+            4. Ne pas: ajouter/supprimer des mots, reformuler des phrases, modifier le ton
+            5. Privilégier les corrections minimales nécessaires
+            6. Pour les ambiguïtés, choisir la correction la plus proche du contexte original
+            7. Retourner UNIQUEMENT le texte corrigé sans commentaires ni explications"""
         },
-        
         {
-            "role": "user", "content": "Corrigez l'orthographe et les formes inappropriées dans ce texte : " + texteACorriger +""
+            "role": "user", 
+            "content": "Texte à corriger / Text to correct:\n\n" + texteACorriger
         }
     ]
 )
