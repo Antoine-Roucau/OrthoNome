@@ -1,5 +1,5 @@
 # OrthoNome
-Program to correct spelling mistakes in the clipboard using hotkeys. Uses the OpenAI API, so you need an account and credits to obtain an API key.<br>
+Program to correct spelling mistakes (French and English) in the clipboard using hotkeys. Uses the OpenAI API, so you need an account and credits to obtain an API key.<br>
 
 Steps to run the script:
 1. Download this project
