@@ -1,24 +1,15 @@
-# Ortho-Bot
-Petit programme permettant de corriger les fautes d'orthographe dans le presse-papiers par l'utilisation de hotkeys. Utilise l'API OpenAI, donc il est nécessaire d'avoir un compte ainsi que des crédits pour obtenir une clé API.
+# OrthoNome
+Program to correct spelling mistakes in the clipboard using hotkeys. Uses the OpenAI API, so you need an account and credits to obtain an API key.
 
+Steps to run the script : 
 
-Étapes pour faire fonctionner le script : 
+1. Download this project
 
-1. Télécharger le git
+2. Modify the API key in OrthoNome.py
 
-2. Changer la clé API dans boulot_X_bot
+3. Create a .bat shortcut and place it on the desktop
 
-3. Ouvrir un fichier texte en y entrant :
-
-    @echo off
-    
-    python Votre\Chemin\D_acces\monFichier.py
-
-    Puis l'enregistrer en .bat
-
-4. Créer un raccourci du .bat et le placer sur le bureau
-
-5. Aller dans les paramètres du raccourci pour assigner les touches de raccourci (Ctrl + Alt + Numpad 1)
+4. Go to shortcut settings to assign shortcut keys (Ctrl + Alt + Numpad 1)
 
 
 

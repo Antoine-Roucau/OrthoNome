@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 texteACorriger = pyperclip.paste()
 
-openai.api_key = "xxxx"#Changer clé
+openai.api_key = "xxxx"#Change Key
 
 response = openai.chat.completions.create(
     model="gpt-4o",
